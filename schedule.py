@@ -50,3 +50,10 @@ class Schedule():
             print("can't sort by "+str(field)+" yet")
             return self
  
+    def title(self, phrase):
+        #unimplemented
+        return phrase
+
+    def description(self, phrase):
+        #unimplmenented
+        return phrase
