@@ -51,8 +51,7 @@ class Schedule():
             return self
  
     def title(self, phrase):
-        #unimplemented
-        return phrase
+        return Schedule([course for course in self.courses if phrase in course['name']])
 
     def description(self, phrase):
         #unimplmenented
