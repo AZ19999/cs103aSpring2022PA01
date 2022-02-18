@@ -50,6 +50,8 @@ class Schedule():
             print("can't sort by "+str(field)+" yet")
             return self
  
+    #code that we wrote
+   
     def title(self, phrase):
         '''finds courses that have titles which contain a given phrase'''
         return Schedule([course for course in self.courses if phrase in course['name']])
