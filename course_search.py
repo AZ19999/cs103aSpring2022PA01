@@ -52,13 +52,16 @@ def topmenu():
         #code that we wrote
         
         elif command in ['c', 'course']:
-            #unimplemented
+            subjet=input("enter a course")
+            schedule =  schedule.course([course])
             return
         elif command in ['i', 'instructor']:
-            #unimplemented
+            subjet=input("enter an instructor")
+            schedule =  schedule.instructor([subject])
             return
         elif command in ['t', 'title']:
-            #unimplemented
+            subject=input("enter a course title")
+            schedule = schedule.title([subject])
             return
         elif command in ['d', 'description']:
             phrase = input("enter a phrase:")
@@ -74,7 +77,6 @@ def topmenu():
             elif status == 'c':
                 status = 'Closed'
             schedule = schedule.open(status)
-
         #end of our section
 
         else:
@@ -93,6 +95,7 @@ def print_course(course):
     '''
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
+
 
 if __name__ == '__main__':
     topmenu()
