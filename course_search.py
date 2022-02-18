@@ -64,6 +64,27 @@ def print_course(course):
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
 
+def searchsubjectnum(filter):
+    courses=[]
+    for course in courses:
+        if course['subject']==filter or course['coursenum']==filter:
+            courses.add(course)
+    return courses
+
+def searchinstructor(filter):
+    courses=[]
+    for course in courses:
+        if course['instructor']==filter:
+            courses.add(course)
+    return courses
+
+def searchSize(filter):
+    courses=[]
+    for course in courses:
+        if course['linit']==str(filter):
+            courses.add(course)
+    return courses
+
 if __name__ == '__main__':
     topmenu()
 

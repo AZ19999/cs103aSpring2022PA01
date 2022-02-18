@@ -43,6 +43,9 @@ class Schedule():
         ''' subject filters the courses by subject '''
         return Schedule([course for course in self.courses if course['subject'] in subjects])
 
+    def description(self,phrase):
+        return Schedule([course for course in self.courses if course['subject'].find(phrase)>0])
+
     def sort(self,field):
         if field=='subject':
             return Schedule(sorted(self.courses, key= lambda course: course['subject']))
