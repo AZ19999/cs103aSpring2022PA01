@@ -69,3 +69,7 @@ class Schedule():
     def open(self, status):
         '''filters courses by their status, open, closed, or open with consent required, should only ever be passed valid options from course_search'''
         return Schedule([course for course in self.courses if course['status_text'] == status])
+
+    def independent(self, days):
+        '''returns courses based on if they are independent study'''
+        return Schedule([course for course in self.courses if course['independent_study'] == True])
