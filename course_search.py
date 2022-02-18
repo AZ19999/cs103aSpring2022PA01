@@ -58,7 +58,8 @@ def topmenu():
             #unimplemented
             return
         elif command in ['t', 'title']:
-            #unimplemented
+            title = input["input a title:"]
+            title = schedule.title([title])
             return
         elif command in ['d', 'description']:
             phrase = input("enter a phrase:")
