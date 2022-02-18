@@ -58,10 +58,19 @@ def topmenu():
             #unimplemented
             return
         elif command in ['d', 'description']:
-            #unimplemented
-            return
+            phrase = input("enter a phrase:")
+            schedule = schedule.description(phrase)
         elif command in ['o', 'open']:
-            schedule = schedule.open()
+            status = input("Do you want to see open courses that are a.open, b. open with consent required, c. closed [a/b/c]:")
+            while status not in ['a','b','c']:
+                  status = input("Please enter a valid option: a.open, b. open with consent required, c. closed [a/b/c]:")  
+            if status == 'a':
+                status = 'Open'
+            elif status == 'b':
+                status = 'Open Consent Req.'
+            elif status == 'c':
+                status = 'Closed'
+            schedule = schedule.open(status)
         else:
             print('command',command,'is not supported')
             continue
