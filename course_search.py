@@ -48,6 +48,9 @@ def topmenu():
         elif command in ['s','subject']:
             subject = input("enter a subject:")
             schedule = schedule.subject([subject])
+        
+        #code that we wrote
+        
         elif command in ['c', 'course']:
             #unimplemented
             return
@@ -71,6 +74,9 @@ def topmenu():
             elif status == 'c':
                 status = 'Closed'
             schedule = schedule.open(status)
+
+        #end of our section
+
         else:
             print('command',command,'is not supported')
             continue
