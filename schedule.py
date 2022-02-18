@@ -50,10 +50,17 @@ class Schedule():
             print("can't sort by "+str(field)+" yet")
             return self
  
+    #code that we wrote
+   
     def title(self, phrase):
-        #unimplemented
-        return phrase
+        '''finds courses that have titles which contain a given phrase'''
+        return Schedule([course for course in self.courses if phrase in course['name']])
 
     def description(self, phrase):
+        '''finds courses that contain a certain phrase in their description'''
         #unimplmenented
         return phrase
+    
+    def open(self, status):
+        '''filters courses by their status, open, closed, or open with consent required, should only ever be passed valid options from course_search'''
+        return Schedule([course for course in self.courses if course['status_text'] == status])
