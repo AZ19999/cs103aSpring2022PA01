@@ -60,5 +60,5 @@ class Schedule():
         return phrase
     
     def open(self, status):
-        '''filters courses by their status, open, closed, or open with consent required'''
+        '''filters courses by their status, open, closed, or open with consent required, should only ever be passed valid options from course_search'''
         return Schedule([course for course in self.courses if course['status_text'] == status])

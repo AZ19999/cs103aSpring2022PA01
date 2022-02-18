@@ -61,9 +61,9 @@ def topmenu():
             phrase = input("enter a phrase:")
             schedule = schedule.description(phrase)
         elif command in ['o', 'open']:
-            status = input("Do you want to see open courses that are a.open, b. open with consent required, c. closed [a/b/c]:")
+            status = input("Do you want to see courses that are a. Open, b. Open with consent required, c. Closed [a/b/c]:")
             while status not in ['a','b','c']:
-                  status = input("Please enter a valid option: a.open, b. open with consent required, c. closed [a/b/c]:")  
+                  status = input("Please enter a valid option: a. Open, b. Open with consent required, c. Closed [a/b/c]:")  
             if status == 'a':
                 status = 'Open'
             elif status == 'b':
