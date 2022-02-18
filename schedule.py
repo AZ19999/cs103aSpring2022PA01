@@ -56,16 +56,10 @@ class Schedule():
         '''finds courses that have titles which contain a given phrase'''
         return Schedule([course for course in self.courses if phrase in course['name']])
 
-    def description(self, phrase):
-        '''finds courses that contain a certain phrase in their description'''
-        #unimplmenented
-        return phrase
-
     def description(self,phrase):
         '''finds courses with phrase in the description'''
         return Schedule([course for course in self.courses if course['subject'].find(phrase)>0])
 
-    
     def open(self, status):
         '''filters courses by their status, open, closed, or open with consent required, should only ever be passed valid options from course_search'''
         return Schedule([course for course in self.courses if course['status_text'] == status])

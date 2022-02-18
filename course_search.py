@@ -85,6 +85,7 @@ def topmenu():
             elif status == 'c':
                 status = 'Closed'
             schedule = schedule.open(status)
+            
         #end of our section
 
         else:
