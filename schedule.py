@@ -56,3 +56,7 @@ class Schedule():
     def description(self, phrase):
         #unimplmenented
         return phrase
+    
+    def open(self):
+        #unimplemented
+        return Schedule(course['name'] for course in self.courses if course['status_text'] == 'Open')
