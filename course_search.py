@@ -67,8 +67,8 @@ def topmenu():
         elif command in ['d', 'description']:
             phrase = input("enter a phrase:")
             schedule = schedule.description(phrase)
-        elif command in ['i', 'independent_study']:
-            status = input["T (independent study) or F (not independent study"]
+        elif command in ['is', 'independent_study']:
+            status = input("T (independent study) or F (not independent study ")
             if status == 'T':
                 status = 'true'
             else:
